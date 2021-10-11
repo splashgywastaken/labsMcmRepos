@@ -41,10 +41,9 @@ title('1 + cos(phi)');
 grid('on');
 
 %5
-X = -pi:0.1:pi;
-Y = -pi:0.1:pi;
+[X,Y] = meshgrid(-pi:0.1:pi, -pi:0.1:pi);
 Z = max(abs(X), abs(Y));
 nexttile;
-plot3(X,Y,Z);
+surf(X,Y,Z);
 title('max(|X|,|Y|)');
 grid('on');
